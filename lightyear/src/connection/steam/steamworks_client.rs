@@ -5,9 +5,9 @@ use steamworks::{ClientManager, SingleClient, SIResult};
 /// application run. For convenience, Lightyear can automatically create the
 /// client for you, but for more control, you can create it yourself and pass it in to Lightyear.
 pub struct SteamworksClient {
-    app_id: u32,
-    client: steamworks::Client<ClientManager>,
-    single: SyncCell<SingleClient>, // https://github.com/Noxime/steamworks-rs/issues/159
+    pub app_id: u32,
+    pub client: steamworks::Client<ClientManager>,
+    pub single: SyncCell<SingleClient>, // https://github.com/Noxime/steamworks-rs/issues/159
 }
 
 impl std::fmt::Debug for SteamworksClient {
